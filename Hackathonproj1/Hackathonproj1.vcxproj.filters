@@ -18,9 +18,6 @@
     <ClInclude Include="directinput.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="effect.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="fade.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
@@ -80,9 +77,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="effect.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="fade.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>

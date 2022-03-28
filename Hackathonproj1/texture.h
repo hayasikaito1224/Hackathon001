@@ -23,52 +23,7 @@ public:
 	typedef enum
 	{
 		None = -1,		// テクスチャ無し
-		Text,			// 仮テクスチャ
-		TIME,			// タイムナンバー
-		FADE,			
-		GOAL,
-		GAUGEBER,//ゲージ
-		GAUGEFRAME,//ゲージの枠
-		COL_AREA,
-		SKILLGAUGE,//必殺技ようのゲージ
-		SHADOW,			//影
-		FIELD,			//床
-		SKY,			//空
-		FIRE,
-		COMMAND_ATTACK,
-		COMMAND_MAGIC,
-		COMMAND_ENHANCE,
-		COMMAND_BG,//コマンドの背景
-		A_BUTTON,
-		B_BUTTON,
-		X_BUTTON,
-		L_BUTTON,
-		BLAZE,
-		ICECLE,
-		HEEL,
-		Map_Player,
-		Map_Enemy,
-		Map_Purpose,	//目的地に指すやつ
-		Title,			//タイトル背景
-		GameStart,		//ゲームスタート
-		Gameover000,	//ゲームオーバーロゴ
-		GameClear000,	//ゲームクリア背景
-		Cursol,			//カーソル
-		Retry,			//リトライ
-		TitleBack001,		//タイトルに戻る
-		GameBack,		//ゲームに戻る
-		Operation,		//チュートリアル
-		Operation01,
-		Effect,			//エフェクト
-		GlitterEffect,			//キラキラエフェクト
-		MagicCircle_TypeB,			//キラキラエフェクト
-		RingEffect,			//キラキラエフェクト
-		LifeEffect,
-		HitEffect,
-		SwordEffect,			//エフェクト
-		TargetText,//目的地表示用の
-		RockOn,//ロックオン用
-		SkillOk,//ロックオン用
+		Test,			// 仮テクスチャ
 		Max,			// テクスチャの最大数
 	} Type;
 
