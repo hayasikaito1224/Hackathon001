@@ -9,10 +9,7 @@
 class CInputKeyBoard;
 class CRenderer;
 class CTexture;
-class CLight;
-class CModel;
 class CPlayer;
-class CModel_Spawner;
 class CTitle;
 class CGame;
 class CFade;
@@ -22,7 +19,6 @@ class CDirectInput;
 class CMouse;
 class CSound;
 class CPause;
-class CXload;
 
 class CManager
 {
@@ -41,7 +37,6 @@ public:
 	void Uninit(void);
 	void Update(void);
 	void Draw(void);
-	static CXload	 *GetXload(void) { return m_pXload; }
 	static CRenderer *GetRenderer(void);
 	static CInputKeyBoard *GetInputKeyboard(void);
 	static CTexture *GetTexture(void);
@@ -69,9 +64,7 @@ private:
 	static bool				m_bStop;
 	static bool				m_bPause;
 	static bool				m_bEnd;
-	static CLight			*m_pLight[3];
 	static CPlayer			*m_pPlayer;
-	static CModel_Spawner	*m_pModel;
 	static CTitle			*m_pTitle;
 	static CGame			*m_pGame;
 	static CResult			*m_pResult;
@@ -81,7 +74,6 @@ private:
 	static CDirectInput		*m_pDirectInput;
 	static CSound			*m_pSound;
 	static CPause			*m_pPause;
-	static CXload			*m_pXload;			//Xファイルの読み込みクラス
 	static bool	m_bClear;					//クリアしたかの判定
 };
 

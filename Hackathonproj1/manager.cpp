@@ -21,9 +21,7 @@
 CInputKeyBoard	*CManager::m_pInputKeyboard = NULL;
 CRenderer		*CManager::m_pRenderer = NULL;
 CTexture		*CManager::m_pTexture = NULL;
-CLight			*CManager::m_pLight[3] = {};
 CPlayer			*CManager::m_pPlayer = NULL;
-CModel_Spawner	*CManager::m_pModel = NULL;
 CGame			*CManager::m_pGame = NULL;
 CTitle			*CManager::m_pTitle = NULL;
 CResult			*CManager::m_pResult = NULL;
@@ -33,7 +31,6 @@ CManager::MODE	 CManager::m_Mode = MODE_GAME;		// 初期モード
 CMouse			*CManager::m_Mouse = NULL;
 CSound			*CManager::m_pSound = NULL;
 CPause			*CManager::m_pPause = NULL;
-CXload			*CManager::m_pXload = NULL;
 CDirectInput	*CManager::m_pDirectInput = NULL;
 bool			CManager::m_bPause = false;
 bool			CManager::m_bStop = false;
@@ -92,7 +89,7 @@ HRESULT CManager::Init(HINSTANCE hInstance, HWND hWnd, bool bWindow)
 	//フェードの生成
 	if (m_Fade == NULL)
 	{
-		m_Fade = CFade::Create(CTexture::Text, m_Mode);
+		m_Fade = CFade::Create(CTexture::Test, m_Mode);
 
 		SetMode(m_Mode);
 
@@ -140,16 +137,6 @@ void CManager::Uninit(void)
 		m_pInputKeyboard->Uninit();
 		delete m_pInputKeyboard;
 		m_pInputKeyboard = NULL;
-	}
-
-	// ライトの破棄
-	for (int nLight = 0; nLight < 3; nLight++)
-	{
-		if (m_pLight[nLight] != NULL)
-		{
-			delete m_pLight[nLight];
-			m_pLight[nLight] = NULL;
-		}
 	}
 
 	// マウスの破棄
